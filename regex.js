@@ -1,3 +1,5 @@
+// validate email
+
 let emailPattern = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
 let email_1 = "a@gmail.com";
 let email_2 = "ab@yahoo.com";

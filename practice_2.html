@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        #search {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Tiêu đề thứ nhất</td>
+                <td>
+                    <button>Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tiêu đề thứ hai</td>
+                <td>
+                    <button>Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tiêu đề thứ ba</td>
+                <td>
+                    <button>Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tiêu đề thứ tư</td>
+                <td>
+                    <button>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        window.onload = function () {
+            let buttonlist = document.getElementsByTagName('button')
+            console.log(buttonlist);
+            for (let button of buttonlist) {
+                button.addEventListener('click', function () {
+                    this.parentElement.parentElement.remove()
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
